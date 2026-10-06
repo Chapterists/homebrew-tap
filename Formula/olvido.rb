@@ -1,15 +1,15 @@
 class Olvido < Formula
   desc "Command-line client for Olvido: platform API, offline script checks, MCP server"
   homepage "https://olvido.app"
-  version "0.1.1"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/Chapterists/olvido-releases/releases/download/v0.1.1/olvido-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "2d0d6d70cd2c8dfc427177c61a786e36e83d491d74d3289e16c182e6969b81e3"
+      url "https://github.com/Chapterists/olvido-releases/releases/download/v0.2.0/olvido-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "4e338050d2d92f2c7ec87644d155956a00d999880d377f43170209cf8963ba04"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Chapterists/olvido-releases/releases/download/v0.1.1/olvido-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "52e7b07ae4941afa17bc539b04af437f0bdaa668462e4698e7cf7c853e35fad3"
+      url "https://github.com/Chapterists/olvido-releases/releases/download/v0.2.0/olvido-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "b1a5c70e6d7f2a3959cf610a5236ba06e3186c8866d8af1307166dd74484a56f"
     end
   end
 
