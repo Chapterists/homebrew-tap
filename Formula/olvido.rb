@@ -1,22 +1,21 @@
 class Olvido < Formula
   desc "Command-line client for Olvido: platform API, offline script checks, MCP server"
   homepage "https://olvido.app"
-  version "0.5.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/Chapterists/olvido-releases/releases/download/v0.5.0/olvido-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "eadc68b10d6fced299b28442b020acb7cc5fd0b58f874720d525a8fe638c6a47"
+      url "https://github.com/Chapterists/olvido-releases/releases/download/v0.6.1/olvido-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "b571b81da2ec146d3a41ee5b1718061795fc83228be20d1823db83ec5a4991a7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Chapterists/olvido-releases/releases/download/v0.5.0/olvido-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "89bf5966186940fe575dd7874a5a039cb33d4f94a90d881b9be713df71ceab84"
+      url "https://github.com/Chapterists/olvido-releases/releases/download/v0.6.1/olvido-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "ce611f684e4d4534751ed50ab0c8c39dd93349024e9a32f604d833570f445039"
     end
   end
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin": {},
-    "x86_64-apple-darwin": {}
-  }
+    "x86_64-apple-darwin":  {},
+  }.freeze
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
@@ -50,5 +49,9 @@ class Olvido < Formula
     # Install any leftover files in pkgshare; these are probably config or
     # sample files.
     pkgshare.install(*leftover_contents) unless leftover_contents.empty?
+  end
+
+  test do
+    assert_match "olvido #{version}", shell_output("#{bin}/olvido --version")
   end
 end
