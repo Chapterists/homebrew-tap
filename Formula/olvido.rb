@@ -3,12 +3,12 @@ class Olvido < Formula
   homepage "https://olvido.app"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/Chapterists/olvido-releases/releases/download/v0.7.0/olvido-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "82abc552d194eef754334dcff99b0da8100904c29ab16b8ebcf9059a3254f17c"
+      url "https://github.com/Chapterists/olvido-releases/releases/download/v0.8.0/olvido-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "a38c62869c410646ee2ab27224123d34be68abc5c6c28a365d4ab50270744887"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Chapterists/olvido-releases/releases/download/v0.7.0/olvido-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "f75dc9c6a6b910dd9179269b99049bb08ea1a315ed322066a1e3c737728e986d"
+      url "https://github.com/Chapterists/olvido-releases/releases/download/v0.8.0/olvido-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "f9d6eea781cdf50859b49e6a2287eb8119535a1b2d60967ad73e86d678ef3448"
     end
   end
 
